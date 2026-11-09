@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi E-commerce</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo"><i class="fa-solid fa-store"></i> Mi E-commerce</div>
+    <button id="cartBtn" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Carrito (0)</button>
+  </header>
+
+  <main class="container">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Buscar producto por nombre (o dejar vacío para ver todos)..." />
+      <button id="searchBtn" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+    </div>
+
+    <div id="emptyState" class="empty-state">
+      <div class="search-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+      <h2>Resultados de búsqueda...</h2>
+      <p>Escribe algo o presiona Buscar para ver los productos de la tienda.</p>
+    </div>
+
+    <div id="productGrid" class="product-grid hidden"></div>
+
+    <div id="noResults" class="no-results hidden">
+      <p>No se encontraron productos que coincidan con tu búsqueda.</p>
+    </div>
+  </main>
+
+  <div id="cartOverlay" class="cart-overlay hidden"></div>
+
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="drawer-header">
+      <h2><i class="fa-solid fa-cart-shopping"></i> Tu Carrito</h2>
+      <span id="closeCartBtn" class="close-btn">&times;</span>
+    </div>
+    <div id="cartItemsList" class="cart-items-list">
+      <p style="text-align:center; padding: 20px; color: #666;">El carrito está vacío.</p>
+    </div>
+    <div class="drawer-footer">
+      <h3>Total: $<span id="cartTotal">0.00</span> USD</h3>
+      <button id="checkoutBtn" class="checkout-btn"><i class="fa-solid fa-check"></i> Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <script src="./script.js"></script>
+</body>
+</html>
